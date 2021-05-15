@@ -48,11 +48,11 @@
         app:layout_constraintVertical_bias="0.393" />
 
     <TextView
-        android:id="@+id/add"
+        android:id="@+id/operator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -69,7 +69,7 @@
         android:layout_marginLeft="240dp"
         android:layout_marginTop="268dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal|numberSigned"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_answer.*
+import java.math.BigDecimal
+import java.text.DecimalFormat
 
 class AnswerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,11 +13,12 @@ class AnswerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_answer)
 
         val intent = getIntent()
-        val you:Int = intent.getIntExtra("answer",0)
-        val correct:Int = intent.getIntExtra("correct",0)
+        val you: Double = intent.getDoubleExtra("answer",0.0)
+        val correct:Double = intent.getDoubleExtra("correct",0.0)
+        val ok = String.format("%.1f",correct)
 
         yourans.text = you.toString()
-        correctans.text = correct.toString()
+        correctans.text = ok
         if(correctans.text != yourans.text){
             truefalse.text ="Wrong"
         }
